@@ -10,7 +10,7 @@ const AddContact = () => {
     const handleImageChange = (e) => {
         const file = e.target.files[0];
         setImage(file);
-        setPreview(URL.createObjectURL(file)); // Show preview
+        setPreview(URL.createObjectURL(file)); // Show previeww
     };
 
     const addOneContact = async () => {
