@@ -8,7 +8,7 @@ const [messages, setMessages] = useState({}); // Store messages by contactId
 
 const fetchContacts = async () => {
 if (!contactName.trim()) {
-alert("Please enter a contact name");
+alert("Please enter a car name");
 return;
 }
 try {
@@ -43,7 +43,7 @@ const fetchMessages = async (contactId) => {
     // Add a new message for a contact
 const handleUpdateSubmit = async (contactId) => {
     if (!sendNewMessage.trim()) {
-    alert("Please enter a message.");
+    alert("Please enter a review.");
     return;
     }
     try {
@@ -65,12 +65,12 @@ const handleUpdateSubmit = async (contactId) => {
     };
     return (
         <div className="container">
-          <h2 className="text-center mt-4">Add a New Message</h2>
+          <h2 className="text-center mt-4">Add a Review</h2>
           <div className="input-group mb-3">
             <input
               type="text"
               className="form-control"
-              placeholder="Enter contact name"
+              placeholder="Enter Car name"
               value={contactName}
               onChange={(e) => setContactName(e.target.value.toLowerCase())}
             />
@@ -105,14 +105,14 @@ const handleUpdateSubmit = async (contactId) => {
                     onClick={() => fetchMessages(contact.id)}
                   >
                     {/* Replace this comment with an icon if needed */}
-                    Messages
+                    Reviews
                   </button>
                   {/* Send Message Button */}
                   <button
                     className="btn btn-outline-secondary btn-sm ms-auto"
                     onClick={() => setSendContactId(contact.id)}
                   >
-                    New Message
+                    New Review
                   </button>
                 </div>
       

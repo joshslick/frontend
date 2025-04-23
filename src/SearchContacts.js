@@ -22,7 +22,7 @@ const fetchContacts = async () => {
     };
 return ( 
     <div className="container">
-<h2 className="text-center mt-4">Search Contact</h2>
+<h2 className="text-center mt-4">Search Car</h2>
 <div className="input-group mb-3">
     {/* List the result */}
 <ul className="list-group">
@@ -48,7 +48,7 @@ style={{ width: "50px", height: "50px", marginRight: "15px", objectFit: "cover" 
 <input
 type="text"
 className="form-control"
-placeholder="Enter contact name"
+placeholder="Enter Car name"
 value={contactName}
 onChange={(e) => setContactName(e.target.value.toLowerCase())}
 />

@@ -31,30 +31,25 @@ const Sidebar = ({ username, userRole }) => {
                     <Link to="/" className="nav-link text-dark">Home</Link>
                 </li>
                 <li className="nav-item">
-                    <Link to="/contacts" className="nav-link text-dark">View Contacts</Link>
+                    <Link to="/contacts" className="nav-link text-dark">View Cars</Link>
                 </li>
                 <li className="nav-item">
-                    <Link to="/add-contact" className="nav-link text-dark">Add Contact</Link>
+                    <Link to="/add-contact" className="nav-link text-dark">Add Car</Link>
                 </li>
                 <li className="nav-item">
-                    <Link to="/deletecontact" className="nav-link text-dark">Delete Contact</Link>
+                    <Link to="/deletecontact" className="nav-link text-dark">Delete Car</Link>
                 </li>
                 <li className="nav-item">
-                    <Link to="/searchContacts" className="nav-link text-dark">Search Contacts</Link>
+                    <Link to="/searchContacts" className="nav-link text-dark">Search Cars</Link>
                 </li>
+                
+                
+
                 {userRole === "admin" && (
                     <>
+                       
                         <li className="nav-item">
-                            <Link to="/add-contact" className="nav-link text-dark">Add Contact</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/deletecontact" className="nav-link text-dark">Delete Contact</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/updatecontact" className="nav-link text-dark">Update Contact</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/new_message" className="nav-link text-dark">Add New Message</Link>
+                            <Link to="/new_message" className="nav-link text-dark">Add New Review</Link>
                         </li>
                     </>
                 )}

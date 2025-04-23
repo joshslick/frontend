@@ -6,7 +6,6 @@ const DeleteContact = ({contacts, setContacts }) => {
     
 const [contactName, setContactName] = useState("");
 const [contactsQuery, setContactsQuery] = useState([]);
-// Search contacts by name or partial name
 const fetchContacts = async () => {
     if (!contactName.trim()) {
     alert("Please enter a contact name");
@@ -16,13 +15,13 @@ const fetchContacts = async () => {
     const response = await fetch(`http://localhost:3000/contact/name?contact_name=${encodeURIComponent(contactName)}`);
     // Http status code 200, 201 is ok
     if (!response.ok) {
-    throw new Error("Failed to fetch contacts");
+    throw new Error("Failed to fetch Cars");
     }
     // If response ok, convert the data javascript
     const data = await response.json();
     setContactsQuery(data);
     } catch (err) {
-    alert("There was an Error loading searched contacts "+err);
+    alert("There was an Error loading searched Cars "+err);
     }
     };
 // Delete a contact by ID
@@ -33,9 +32,9 @@ const deleteOneContact = async (id) => {
     });
     // Http status code 200, 201 is ok
     if (!response.ok) {
-    throw new Error("Failed to delete contact");
+    throw new Error("Failed to delete Car");
     }
-    alert("Contact deleted successfully");
+    alert("Car deleted successfully");
     // Refresh the contacts list after deletion
     setContactsQuery(contactsQuery.filter(contact => contact.id !== id));
     } catch (err) {
@@ -45,7 +44,7 @@ const deleteOneContact = async (id) => {
 return ( 
     <div className="container">
 {/* Input name or partial name for FETCH */}
-<h2 className="text-center mt-4">Delete Contact</h2>
+<h2 className="text-center mt-4">Delete Car</h2>
 <div className="input-group mb-3">
     {/* List the result and add Delete button to each */}
 <ul className="list-group">
@@ -73,7 +72,7 @@ Delete
 ))}
 </ul>
 </div>
-<input type="text" className="form-control" placeholder="Enter contact name"
+<input type="text" className="form-control" placeholder="Enter Car name"
 value={contactName}
 onChange={(e) => setContactName(e.target.value.toLowerCase())}
 />
